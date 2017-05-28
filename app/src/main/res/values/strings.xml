@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="form_msn">MSN</string>
+    <string name="form_login">Login</string>
 </resources>
