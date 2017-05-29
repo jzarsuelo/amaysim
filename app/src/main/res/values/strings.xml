@@ -2,6 +2,10 @@
     <string name="app_name">My Application</string>
     <string name="form_msn">MSN</string>
     <string name="form_login">Login</string>
+    <string name="form_password">Password</string>
+
+    <!-- API -->
     <string name="api_url">https://raw.githubusercontent.com/amaysim-au/engineering-test-resources/master/collection.json</string>
-    <string name="form_password">Enter Password</string>
+    <string name="loading">Loading ...</string>
+    <string name="failed_login">Invalid MSN/Password.</string>
 </resources>

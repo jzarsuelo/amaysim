@@ -11,7 +11,7 @@ public class AuthUtil {
     private AuthUtil() {}
 
     public static boolean auth(String msn, String password) {
-        JSONObject jsonData = DataSourceUtil.loadData();
+        JSONObject jsonData = DataSourceUtil.loadData(true);
         return validateUser(msn, password, jsonData);
     }
 
