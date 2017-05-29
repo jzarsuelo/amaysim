@@ -2,4 +2,6 @@
     <string name="app_name">My Application</string>
     <string name="form_msn">MSN</string>
     <string name="form_login">Login</string>
+    <string name="api_url">https://raw.githubusercontent.com/amaysim-au/engineering-test-resources/master/collection.json</string>
+    <string name="form_password">Enter Password</string>
 </resources>
