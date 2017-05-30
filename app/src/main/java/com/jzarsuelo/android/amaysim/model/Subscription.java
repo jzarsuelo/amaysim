@@ -12,11 +12,15 @@ public class Subscription {
 
     private long mRolloverCreditBalance;
 
+    private long mRolloverDataBalance;
+
     private long mRolloverTalkBalance;
 
-    private String mExpiratyDate;
+    private String mExpiryDate;
 
     private boolean mAutoRenew;
+
+    private long mInternationalTalkBalance;
 
     public Subscription() {
     }
@@ -45,6 +49,14 @@ public class Subscription {
         mRolloverCreditBalance = rolloverCreditBalance;
     }
 
+    public long getRolloverDataBalance() {
+        return mRolloverDataBalance;
+    }
+
+    public void setRolloverDataBalance(long rolloverDataBalance) {
+        mRolloverDataBalance = rolloverDataBalance;
+    }
+
     public long getRolloverTalkBalance() {
         return mRolloverTalkBalance;
     }
@@ -53,12 +65,12 @@ public class Subscription {
         mRolloverTalkBalance = rolloverTalkBalance;
     }
 
-    public String getExpiratyDate() {
-        return mExpiratyDate;
+    public String getExpiryDate() {
+        return mExpiryDate;
     }
 
-    public void setExpiratyDate(String expiratyDate) {
-        mExpiratyDate = expiratyDate;
+    public void setExpiryDate(String expiryDate) {
+        mExpiryDate = expiryDate;
     }
 
     public boolean isAutoRenew() {
@@ -67,5 +79,13 @@ public class Subscription {
 
     public void setAutoRenew(boolean autoRenew) {
         mAutoRenew = autoRenew;
+    }
+
+    public long getInternationalTalkBalance() {
+        return mInternationalTalkBalance;
+    }
+
+    public void setInternationalTalkBalance(long internationalTalkBalance) {
+        mInternationalTalkBalance = internationalTalkBalance;
     }
 }

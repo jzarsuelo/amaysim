@@ -8,9 +8,11 @@ public class Service {
 
     private String mMsn;
 
-    private float mCredit;
+    private double mCredit;
 
     private String mCreditExpiry;
+
+    private boolean mDataUsageThreshold;
 
     public Service() {
     }
@@ -23,11 +25,11 @@ public class Service {
         mMsn = msn;
     }
 
-    public float getCredit() {
+    public double getCredit() {
         return mCredit;
     }
 
-    public void setCredit(float credit) {
+    public void setCredit(double credit) {
         mCredit = credit;
     }
 
@@ -37,5 +39,13 @@ public class Service {
 
     public void setCreditExpiry(String creditExpiry) {
         mCreditExpiry = creditExpiry;
+    }
+
+    public boolean isDataUsageThreshold() {
+        return mDataUsageThreshold;
+    }
+
+    public void setDataUsageThreshold(boolean dataUsageThreshold) {
+        mDataUsageThreshold = dataUsageThreshold;
     }
 }

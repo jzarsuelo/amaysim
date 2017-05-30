@@ -16,13 +16,13 @@ public class Product {
 
     private boolean mUnliText;
 
-    private boolean mUnliCall;
+    private boolean mUnliTalk;
 
     private boolean mUnliInternationalText;
 
     private boolean mUnliInternationalTalk;
 
-    private float mPrice;
+    private long mPrice;
 
     public Product() {
     }
@@ -67,12 +67,12 @@ public class Product {
         mUnliText = unliText;
     }
 
-    public boolean isUnliCall() {
-        return mUnliCall;
+    public boolean isUnliTalk() {
+        return mUnliTalk;
     }
 
-    public void setUnliCall(boolean unliCall) {
-        mUnliCall = unliCall;
+    public void setUnliTalk(boolean unliTalk) {
+        mUnliTalk = unliTalk;
     }
 
     public boolean isUnliInternationalText() {
@@ -91,11 +91,11 @@ public class Product {
         mUnliInternationalTalk = unliInternationalTalk;
     }
 
-    public float getPrice() {
+    public long getPrice() {
         return mPrice;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(long price) {
         mPrice = price;
     }
 }
