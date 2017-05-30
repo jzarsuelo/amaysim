@@ -12,8 +12,8 @@
 
     <!-- Subscription -->
     <string name="subscription_data_balance">Data Balance:  %1$s</string>
-    <string name="subscription_credit_balance">Credit Balance: $ %1$s</string>
-    <string name="subscription_rollover_credit_balance">Rollover Credit Balance: $ %1$s</string>
+    <string name="subscription_credit_balance">Credit Balance: %1$s</string>
+    <string name="subscription_rollover_credit_balance">Rollover Credit Balance: %1$s</string>
     <string name="subscription_rollover_data_balance">Rollover Data Balance:  %1$s</string>
     <string name="subscription_international_talk_balance">International Talk Balance:  %1$s</string>
     <string name="subscription_expiry_date">Expiry Date:  %1$s</string>

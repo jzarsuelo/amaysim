@@ -21,7 +21,7 @@ public class FormatTextUtil {
      * Converts cents to dollars
      */
     public static String covertToDollar(long cents) {
-        return  String.format("$%.2f", (float) cents/100);
+        return  String.format("$ %.2f", (float) cents/100);
     }
 
     /**

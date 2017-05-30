@@ -51,15 +51,15 @@ public class SummaryActivity extends AppCompatActivity
         TextView tvDataBalance = (TextView) findViewById(R.id.tv_data_balance);
         tvDataBalance.setText(dataBalance);
 
-        String creditBalance = String.format(
-                getString(R.string.subscription_credit_balance),
-                String.valueOf(subscription.getCreditBalance()));
+        String creditBalance = FormatTextUtil.covertToDollar(subscription.getCreditBalance());
+        creditBalance = String.format(
+                getString(R.string.subscription_credit_balance), creditBalance);
         TextView tvCreditBalance = (TextView) findViewById(R.id.tv_credit_balance);
         tvCreditBalance.setText(creditBalance);
 
-        String rolloverCreditBalance = String.format(
-                getString(R.string.subscription_rollover_credit_balance),
-                String.valueOf(subscription.getRolloverCreditBalance()));
+        String rolloverCreditBalance = FormatTextUtil.covertToDollar(subscription.getRolloverCreditBalance());
+        rolloverCreditBalance = String.format(
+                getString(R.string.subscription_rollover_credit_balance), rolloverCreditBalance);
         TextView tvRolloverCreditBalance = (TextView) findViewById(R.id.tv_rollover_credit_balance);
         tvRolloverCreditBalance.setText(rolloverCreditBalance);
 
