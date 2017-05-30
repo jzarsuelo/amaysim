@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.jzarsuelo.android.myapplication"
+        applicationId "com.jzarsuelo.android.amaysim"
         minSdkVersion 19
         targetSdkVersion 25
         versionCode 1

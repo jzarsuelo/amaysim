@@ -127,64 +127,56 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_subscription"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Data balance:  "/>
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <TextView
                     android:id="@+id/tv_credit_balance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_data_balance"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Credit balance:  "/>
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <TextView
                     android:id="@+id/tv_rollover_credit_balance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_credit_balance"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Rollover credit balance:  "/>
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <TextView
                     android:id="@+id/tv_rollover_data_balance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_rollover_credit_balance"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Rollover data balance:  "/>
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <TextView
                     android:id="@+id/tv_international_talk_balance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_rollover_data_balance"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="International talk balance:  "/>
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <TextView
                     android:id="@+id/tv_expiry_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_international_talk_balance"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Expiry date:  "/>
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <TextView
                     android:id="@+id/tv_auto_renewal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_expiry_date"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Auto renewal:  "/>
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <TextView
-                    android:id="@+id/primary_subscription"
+                    android:id="@+id/tv_primary_subscription"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_auto_renewal"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Primary subscription:  "/>
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
             </android.support.constraint.ConstraintLayout>
 

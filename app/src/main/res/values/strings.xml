@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">amaysim</string>
     <string name="form_msn">MSN</string>
     <string name="form_login">Login</string>
     <string name="form_password">Password</string>
@@ -9,4 +9,14 @@
     <string name="loading">Loading ...</string>
     <string name="failed_login">Invalid MSN/Password.</string>
     <string name="account_summary">Account Summary</string>
+
+    <!-- Subscription -->
+    <string name="subscription_data_balance">Data Balance:  %1$s</string>
+    <string name="subscription_credit_balance">Credit Balance: $ %1$s</string>
+    <string name="subscription_rollover_credit_balance">Rollover Credit Balance: $ %1$s</string>
+    <string name="subscription_rollover_data_balance">Rollover Data Balance:  %1$s</string>
+    <string name="subscription_international_talk_balance">International Talk Balance:  %1$s</string>
+    <string name="subscription_expiry_date">Expiry Date:  %1$s</string>
+    <string name="subscription_auto_renewal">Auto Renewal:  %1$s</string>
+    <string name="primary_subscription">Primary Subscription:  %1$s</string>
 </resources>
