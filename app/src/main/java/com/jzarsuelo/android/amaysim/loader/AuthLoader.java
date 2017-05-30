@@ -24,7 +24,6 @@ public class AuthLoader extends AsyncTaskLoader<Boolean> {
 
     @Override
     public Boolean loadInBackground() {
-        Log.d(AuthLoader.class.getSimpleName(), "sdfsadf " + mMsn);
         return AuthUtil.auth(mMsn, mPassword);
     }
 

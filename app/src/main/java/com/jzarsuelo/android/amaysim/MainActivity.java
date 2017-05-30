@@ -1,6 +1,7 @@
 package com.jzarsuelo.android.amaysim;
 
 import android.app.LoaderManager;
+import android.content.Intent;
 import android.content.Loader;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -64,7 +65,8 @@ public class MainActivity extends AppCompatActivity
         toggleProgressVisibility(false);
 
         if (isLoginSuccessful) {
-            // show summary
+            Intent i = new Intent(this, SummaryActivity.class);
+            startActivity(i);
         } else {
             Snackbar.make(mLayoutProgress, R.string.failed_login, Snackbar.LENGTH_LONG).show();
         }
