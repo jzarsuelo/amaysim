@@ -44,14 +44,14 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_account"
-                    android:text="Name:  Zarsuelo, Jan Paolo"/>
+                    android:text="@string/acct_name"/>
 
                 <TextView
                     android:id="@+id/tv_payment_type"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_name"
-                    android:text="Payment type:  Prepaid"
+                    android:text="@string/acct_payment_type"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_name"/>
 
@@ -60,7 +60,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_payment_type"
-                    android:text="Unbilled charges:  "
+                    android:text="@string/acct_unbilled_charges"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_payment_type"/>
 
@@ -69,8 +69,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_payment_type"
-                    android:text="Next billing date:  "
-                    android:visibility="gone"
+                    android:text="@string/acct_next_billing_date"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_unbilled_charges"/>
 
@@ -79,7 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_payment_type"
-                    android:text="Contact no: "
+                    android:text="@string/acct_contact_no"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_next_billing_date"/>
 
@@ -88,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tv_payment_type"
-                    android:text="Email address:  jpzarsuelo@gmail.com"
+                    android:text="@string/acct_email_address"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_contact_no"/>
 

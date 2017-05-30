@@ -45,8 +45,9 @@ public class JsonParserUtil {
         JSONObject jsonAttr = jsonData.getJSONObject("attributes");
 
         user.setPaymentType( jsonAttr.getString("payment-type") );
-        user.setUnbilledCharges( jsonAttr.optString("unbilled-charges") );
-        user.setNextBillingDate( jsonAttr.optString("next-billing-date") );
+        user.setUnbilledCharges( jsonAttr.optLong("unbilled-charges") );
+        user.setNextBillingDate( jsonAttr.isNull("next-billing-date") ?
+                null : jsonAttr.optString("next-billing-date") );
         user.setTitle( jsonAttr.getString("title") );
         user.setFirstName( jsonAttr.getString("first-name") );
         user.setLastName( jsonAttr.getString("last-name") );

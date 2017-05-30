@@ -10,7 +10,7 @@ public class User {
 
     private String mNextBillingDate;
 
-    private String mUnbilledCharges;
+    private long mUnbilledCharges;
 
     private String mTitle;
 
@@ -48,11 +48,11 @@ public class User {
         mNextBillingDate = nextBillingDate;
     }
 
-    public String getUnbilledCharges() {
+    public long getUnbilledCharges() {
         return mUnbilledCharges;
     }
 
-    public void setUnbilledCharges(String unbilledCharges) {
+    public void setUnbilledCharges(long unbilledCharges) {
         mUnbilledCharges = unbilledCharges;
     }
 

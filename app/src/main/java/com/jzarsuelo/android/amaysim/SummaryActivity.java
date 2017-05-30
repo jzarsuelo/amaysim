@@ -36,6 +36,7 @@ public class SummaryActivity extends AppCompatActivity
 
     @Override
     public void onLoadFinished(Loader<User> loader, User data) {
+        populateAccountInfoView(data);
         populateSubscriptionView(data);
         populateProductView(data);
     }
@@ -179,5 +180,60 @@ public class SummaryActivity extends AppCompatActivity
         price = String.format( getString(R.string.product_price), price);
         TextView tvPrice = (TextView) findViewById(R.id.tv_price);
         tvPrice.setText(price);
+    }
+
+    private void populateAccountInfoView(User user) {
+
+        String name = user.getLastName() + ", " + user.getFirstName();
+        name = String.format(getString(R.string.acct_name), name);
+
+        TextView tvName = (TextView) findViewById(R.id.tv_name);
+        tvName.setText(name);
+
+
+
+        String paymentType = user.getPaymentType();
+        paymentType = String.format(getString(R.string.acct_payment_type), paymentType);
+
+        TextView tvPaymentType = (TextView) findViewById(R.id.tv_payment_type);
+        tvPaymentType.setText(paymentType);
+
+
+
+        String unbilledCharges = FormatTextUtil.covertToDollar( user.getUnbilledCharges() );
+        unbilledCharges = String.format(getString(R.string.acct_unbilled_charges), unbilledCharges);
+
+        TextView tvUnbilledCharges = (TextView) findViewById(R.id.tv_unbilled_charges);
+        tvUnbilledCharges.setText(unbilledCharges);
+
+
+
+        String nextBillingDate = user.getNextBillingDate();
+        TextView tvNextBillingDate = (TextView) findViewById(R.id.tv_next_billing_date);
+
+        if ( nextBillingDate == null ) {
+
+            tvNextBillingDate.setVisibility(View.GONE);
+
+        } else {
+
+            nextBillingDate = String.format( getString(R.string.acct_next_billing_date), nextBillingDate );
+            tvNextBillingDate.setText(nextBillingDate);
+        }
+
+
+
+        String contactNo = user.getContactNumber();
+        contactNo = String.format(getString(R.string.acct_contact_no), contactNo);
+
+        TextView tvContactNo = (TextView) findViewById(R.id.tv_contact_no);
+        tvContactNo.setText(contactNo);
+
+
+        String email = user.getEmailAddress();
+        email = String.format(getString(R.string.acct_email_address), email);
+
+        TextView tvEmail = (TextView) findViewById(R.id.tv_email_address);
+        tvEmail.setText(email);
     }
 }

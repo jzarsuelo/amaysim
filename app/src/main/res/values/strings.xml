@@ -30,4 +30,12 @@
     <string name="product_unlimited_international_text">Unlimited International Text: %1$s</string>
     <string name="product_unlimited_international_talk">Unlimited International Talk: %1$s</string>
     <string name="product_price">Price: %1$s</string>
+
+    <!--Account Info-->
+    <string name="acct_name">Name: %1$s</string>
+    <string name="acct_payment_type">Payment Type: %1$s</string>
+    <string name="acct_unbilled_charges">Unbilled Charges: %1$s</string>
+    <string name="acct_next_billing_date">Next Billing Date: %1$s</string>
+    <string name="acct_contact_no">Contact no: %1$s</string>
+    <string name="acct_email_address">Email address: %1$s</string>
 </resources>
