@@ -19,4 +19,15 @@
     <string name="subscription_expiry_date">Expiry Date:  %1$s</string>
     <string name="subscription_auto_renewal">Auto Renewal:  %1$s</string>
     <string name="primary_subscription">Primary Subscription:  %1$s</string>
+
+    <!-- Product -->
+    <string name="product_name">Name: %1$s</string>
+    <string name="product_data">Data: %1$s</string>
+    <string name="product_credit">Credit: %1$s</string>
+    <string name="product_international_talk">International Talk: %1$s</string>
+    <string name="product_unlimited_text">Unlimited Text: %1$s</string>
+    <string name="product_unlimited_talk">Unlimited Talk: %1$s</string>
+    <string name="product_unlimited_international_text">Unlimited International Text: %1$s</string>
+    <string name="product_unlimited_international_talk">Unlimited International Talk: %1$s</string>
+    <string name="product_price">Price: %1$s</string>
 </resources>

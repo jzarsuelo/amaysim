@@ -215,7 +215,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_product"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Name:  UNLIMITED 7GB"/>
+                    android:text="@string/product_name"/>
 
                 <TextView
                     android:id="@+id/tv_data"
@@ -223,7 +223,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_product_name"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Data:  "/>
+                    android:text="@string/product_data"/>
 
                 <TextView
                     android:id="@+id/tv_credit"
@@ -231,7 +231,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_data"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Credit:  "/>
+                    android:text="@string/product_credit"/>
 
                 <TextView
                     android:id="@+id/tv_international_talk"
@@ -239,7 +239,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_credit"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="International Talk:  "/>
+                    android:text="@string/product_international_talk"/>
 
                 <TextView
                     android:id="@+id/tv_unlimited_text"
@@ -247,7 +247,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_international_talk"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Unlimited Text:  "/>
+                    android:text="@string/product_unlimited_text"/>
 
                 <TextView
                     android:id="@+id/tv_unlimited_talk"
@@ -255,7 +255,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_unlimited_text"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Unlimited Talk:  "/>
+                    android:text="@string/product_unlimited_talk"/>
 
                 <TextView
                     android:id="@+id/tv_unlimited_international_text"
@@ -263,7 +263,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_unlimited_talk"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Unlimited International Text:  "/>
+                    android:text="@string/product_unlimited_international_text"/>
 
                 <TextView
                     android:id="@+id/tv_unlimited_international_talk"
@@ -271,7 +271,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_unlimited_international_text"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Unlimited International Talk:  "/>
+                    android:text="@string/product_unlimited_international_talk"/>
 
                 <TextView
                     android:id="@+id/tv_price"
@@ -279,7 +279,7 @@
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/tv_unlimited_international_talk"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    android:text="Price:  "/>
+                    android:text="@string/product_price"/>
 
             </android.support.constraint.ConstraintLayout>
 

@@ -4,10 +4,11 @@ import android.app.LoaderManager;
 import android.content.Loader;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.jzarsuelo.android.amaysim.loader.UserDataLoader;
+import com.jzarsuelo.android.amaysim.model.Product;
 import com.jzarsuelo.android.amaysim.model.Subscription;
 import com.jzarsuelo.android.amaysim.model.User;
 import com.jzarsuelo.android.amaysim.util.FormatTextUtil;
@@ -35,7 +36,8 @@ public class SummaryActivity extends AppCompatActivity
 
     @Override
     public void onLoadFinished(Loader<User> loader, User data) {
-        populateSubscription(data);
+        populateSubscriptionView(data);
+        populateProductView(data);
     }
 
     @Override
@@ -43,7 +45,7 @@ public class SummaryActivity extends AppCompatActivity
 
     }
 
-    private void populateSubscription(User data) {
+    private void populateSubscriptionView(User data) {
         Subscription subscription = data.getSubscription();
 
         String dataBalance = FormatTextUtil.convertToGb(subscription.getDataBalance());
@@ -53,19 +55,22 @@ public class SummaryActivity extends AppCompatActivity
 
         String creditBalance = FormatTextUtil.covertToDollar(subscription.getCreditBalance());
         creditBalance = String.format(
-                getString(R.string.subscription_credit_balance), creditBalance);
+                getString(R.string.subscription_credit_balance),
+                creditBalance);
         TextView tvCreditBalance = (TextView) findViewById(R.id.tv_credit_balance);
         tvCreditBalance.setText(creditBalance);
 
         String rolloverCreditBalance = FormatTextUtil.covertToDollar(subscription.getRolloverCreditBalance());
         rolloverCreditBalance = String.format(
-                getString(R.string.subscription_rollover_credit_balance), rolloverCreditBalance);
+                getString(R.string.subscription_rollover_credit_balance),
+                rolloverCreditBalance);
         TextView tvRolloverCreditBalance = (TextView) findViewById(R.id.tv_rollover_credit_balance);
         tvRolloverCreditBalance.setText(rolloverCreditBalance);
 
         String rolloverDataBalance = FormatTextUtil.convertToGb(subscription.getRolloverCreditBalance());
         rolloverDataBalance = String.format(
-                getString(R.string.subscription_rollover_data_balance), rolloverDataBalance);
+                getString(R.string.subscription_rollover_data_balance),
+                rolloverDataBalance);
         TextView tvRolloverDataBalance = (TextView) findViewById(R.id.tv_rollover_data_balance);
         tvRolloverDataBalance.setText(rolloverDataBalance);
 
@@ -93,6 +98,86 @@ public class SummaryActivity extends AppCompatActivity
         TextView tvPrimarySubscription = (TextView) findViewById(R.id.tv_primary_subscription);
         tvPrimarySubscription.setText( primarySubscription );
 
+    }
 
+    private void populateProductView(User userData) {
+        Product product = userData.getProduct();
+
+        TextView tvName = (TextView) findViewById(R.id.tv_product_name);
+        tvName.setText( product.getName() );
+
+
+        TextView tvData = (TextView) findViewById(R.id.tv_data);
+        long data = product.getIncludedData();
+        if ( data == 0) {
+
+            tvData.setVisibility(View.GONE );
+
+        } else {
+
+            String strData = String.format(getString(R.string.product_data), String.valueOf(data));
+            tvData.setText(strData);
+        }
+
+
+        TextView tvCredit = (TextView) findViewById(R.id.tv_credit);
+        long credit = product.getIncludedCredit();
+        if (credit == 0) {
+
+            tvCredit.setVisibility(View.GONE );
+
+        } else {
+
+            String strCredit = FormatTextUtil.covertToDollar(credit);
+            strCredit = String.format(getString(R.string.product_credit), strCredit);
+            tvCredit.setText(strCredit);
+        }
+
+
+        TextView tvInternationalTalk = (TextView) findViewById(R.id.tv_international_talk);
+        long internationalTalk = product.getIncludedInternationalTalk();
+        if (internationalTalk == 0) {
+
+            tvInternationalTalk.setVisibility(View.GONE);
+
+        } else {
+
+            String strInternationalTalk = String.format(
+                    getString(R.string.product_international_talk),
+                    String.valueOf(internationalTalk));
+
+            tvInternationalTalk.setText( strInternationalTalk );
+        }
+
+
+        String unlimitedText = FormatTextUtil.getUserFriendlyBoolean( product.isUnliText() );
+        unlimitedText = String.format(getString(R.string.product_unlimited_text), unlimitedText);
+        TextView tvUnlimitedText = (TextView) findViewById(R.id.tv_unlimited_text);
+        tvUnlimitedText.setText(unlimitedText);
+
+
+        String unlimitedTalk = FormatTextUtil.getUserFriendlyBoolean( product.isUnliTalk() );
+        unlimitedTalk = String.format(getString(R.string.product_unlimited_talk), unlimitedTalk);
+        TextView tvUnlimitedTalk = (TextView) findViewById(R.id.tv_unlimited_talk);
+        tvUnlimitedTalk.setText(unlimitedTalk);
+
+
+        String unliIntlText = FormatTextUtil.getUserFriendlyBoolean( product.isUnliInternationalText() );
+        unliIntlText = String.format( getString(R.string.product_unlimited_international_text),
+                unliIntlText);
+        TextView tvUnliIntlText = (TextView) findViewById(R.id.tv_unlimited_international_text);
+        tvUnliIntlText.setText(unliIntlText);
+
+
+        String unliIntlTalk = FormatTextUtil.getUserFriendlyBoolean( product.isUnliInternationalTalk() );
+        unliIntlTalk = String.format( getString(R.string.product_unlimited_international_talk),
+                unliIntlTalk);
+        TextView tvUnliIntlTalk = (TextView) findViewById(R.id.tv_unlimited_international_talk);
+        tvUnliIntlTalk.setText(unliIntlTalk);
+
+        String price = FormatTextUtil.covertToDollar( product.getPrice() );
+        price = String.format( getString(R.string.product_price), price);
+        TextView tvPrice = (TextView) findViewById(R.id.tv_price);
+        tvPrice.setText(price);
     }
 }
