@@ -14,6 +14,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.jzarsuelo.android.amaysim.loader.AuthLoader;
+import com.jzarsuelo.android.amaysim.util.ConnectivityUtil;
 
 public class MainActivity extends AppCompatActivity
         implements LoaderManager.LoaderCallbacks<Boolean> {
@@ -46,8 +47,13 @@ public class MainActivity extends AppCompatActivity
 
     protected void onLogin(View v) {
 
-        getLoaderManager().restartLoader(AUTH_LOADER_ID, null, this)
-                .forceLoad();
+        if ( ConnectivityUtil.isConnected(this) ) {
+            getLoaderManager().restartLoader(AUTH_LOADER_ID, null, this)
+                    .forceLoad();
+        } else {
+            showNoNetworkError();
+        }
+
 
     }
 
@@ -62,13 +68,17 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onLoadFinished(Loader loader, Boolean isLoginSuccessful) {
-        toggleProgressVisibility(false);
 
         if (isLoginSuccessful) {
+
             Intent i = new Intent(this, SummaryActivity.class);
             startActivity(i);
+
         } else {
-            Snackbar.make(mLayoutProgress, R.string.failed_login, Snackbar.LENGTH_LONG).show();
+
+            toggleProgressVisibility(false);
+            showInvalidCredential();
+
         }
     }
 
@@ -86,5 +96,13 @@ public class MainActivity extends AppCompatActivity
         mEditMsn.setVisibility(formVisibility);
         mEditPassword.setVisibility(formVisibility);
         mButtonLogin.setVisibility(formVisibility);
+    }
+
+    private void showInvalidCredential() {
+        Snackbar.make(mLayoutProgress, R.string.failed_login, Snackbar.LENGTH_LONG).show();
+    }
+
+    private void showNoNetworkError() {
+        Snackbar.make(mLayoutProgress, R.string.error_no_connection, Snackbar.LENGTH_LONG).show();
     }
 }
