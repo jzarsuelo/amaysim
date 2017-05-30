@@ -1,7 +1,7 @@
 package com.jzarsuelo.android.amaysim.util;
 
 /**
- * Created by Pao on 30/5/17.
+ * Utility class for formatting text
  */
 
 public class FormatTextUtil {
@@ -21,5 +21,5 @@ public class FormatTextUtil {
     public static String covertToDollar(long cents) {
         return  String.format("$%.2f", (float) cents/100);
     }
-    
+
 }
